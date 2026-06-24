@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CV - Karim BETTANE | Développeur Web Full Stack</title>
+  <style>
+    * { margin: 0; padding: 0; box-sizing: border-box; }
+    body { font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; background: #f5f7fa; color: #1a202c; line-height: 1.6; }
+    .cv-container { max-width: 800px; margin: 40px auto; background: white; box-shadow: 0 4px 20px rgba(0,0,0,0.12); }
+    .header { background: linear-gradient(135deg, #3B82F6 0%, #8B5CF6 100%); color: white; padding: 40px; }
+    .header h1 { font-size: 36px; font-weight: 700; letter-spacing: 2px; margin-bottom: 8px; }
+    .header p { font-size: 14px; opacity: 0.95; letter-spacing: 3px; text-transform: uppercase; }
+    .content { padding: 40px; }
+    .section { margin-bottom: 32px; }
+    .section-title { font-size: 16px; font-weight: 700; color: #3B82F6; text-transform: uppercase; letter-spacing: 1.5px; margin-bottom: 16px; padding-bottom: 8px; border-bottom: 2px solid #e2e8f0; }
+    .contact-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 12px; margin-bottom: 20px; }
+    .contact-item { display: flex; align-items: center; gap: 10px; font-size: 14px; }
+    .contact-icon { width: 32px; height: 32px; background: #ebf5ff; border-radius: 8px; display: flex; align-items: center; justify-content: center; color: #3B82F6; }
+    .profile-text { font-size: 14px; color: #4a5568; text-align: justify; }
+    .skills-grid { display: grid; grid-template-columns: repeat(auto-fit, minmax(220px, 1fr)); gap: 20px; }
+    .skill-category h4 { font-size: 14px; font-weight: 600; color: #2d3748; margin-bottom: 10px; }
+    .skill-category ul { list-style: none; }
+    .skill-category li { font-size: 13px; color: #4a5568; padding: 4px 0; padding-left: 16px; position: relative; }
+    .skill-category li::before { content: "•"; color: #3B82F6; font-weight: bold; position: absolute; left: 0; }
+    .education-item, .lang-item { margin-bottom: 16px; }
+    .education-item h4, .lang-item h4 { font-size: 14px; font-weight: 600; color: #2d3748; }
+    .education-item p, .lang-item p { font-size: 13px; color: #718096; }
+    .lang-bar { height: 6px; background: #e2e8f0; border-radius: 3px; margin-top: 6px; overflow: hidden; }
+    .lang-fill { height: 100%; background: linear-gradient(90deg, #3B82F6, #8B5CF6); border-radius: 3px; }
+    .qualities-grid, .interests-grid { display: flex; flex-wrap: wrap; gap: 8px; }
+    .quality-tag, .interest-tag { padding: 6px 14px; background: #ebf5ff; color: #3B82F6; border-radius: 20px; font-size: 12px; font-weight: 500; }
+    .interest-tag { background: #f3e8ff; color: #8B5CF6; }
+    .print-btn { position: fixed; bottom: 30px; right: 30px; padding: 14px 28px; background: linear-gradient(135deg, #3B82F6, #8B5CF6); color: white; border: none; border-radius: 12px; font-size: 14px; font-weight: 600; cursor: pointer; box-shadow: 0 4px 15px rgba(59,130,246,0.4); transition: transform 0.2s; }
+    .print-btn:hover { transform: translateY(-2px); }
+    @media print { .print-btn { display: none; } body { background: white; } .cv-container { box-shadow: none; margin: 0; } }
+  </style>
+</head>
+<body>
+  <button class="print-btn" onclick="window.print()">📄 Télécharger / Imprimer</button>
+  
+  <div class="cv-container">
+    <div class="header">
+      <h1>KARIM BETTANE</h1>
+      <p>Développeur Web Full Stack</p>
+    </div>
+    
+    <div class="content">
+      <!-- Contact -->
+      <div class="section">
+        <h2 class="section-title">📞 Contact</h2>
+        <div class="contact-grid">
+          <div class="contact-item">
+            <div class="contact-icon">📱</div>
+            <span>+212 687 238 961</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">✉️</div>
+            <span>karimbettane94@gmail.com</span>
+          </div>
+          <div class="contact-item">
+            <div class="contact-icon">📍</div>
+            <span>Sefrou - Maroc</span>
+          </div>
+        </div>
+      </div>
+
+      <!-- Profil -->
+      <div class="section">
+        <h2 class="section-title">👤 Profil</h2>
+        <p class="profile-text">
+          Stagiaire à l'OFPPT en Développement Digital, option Développeur Web Full Stack (2024-2026). 
+          Passionné par le web, je développe des compétences en création d'applications front-end et back-end, 
+          avec un intérêt pour les technologies modernes et les projets pratiques.
+        </p>
+      </div>
+
+      <!-- Formation -->
+      <div class="section">
+        <h2 class="section-title">🎓 Formation</h2>
+        <div class="education-item">
+          <h4>Diplôme en Développement Digital</h4>
+          <p>ISTA SEFROU | 2024 - 2026</p>
+        </div>
+        <div class="education-item">
+          <h4>Baccalauréat</h4>
+          <p>Lycée Qualifiant Badr | 2023</p>
+        </div>
+      </div>
+
+      <!-- Compétences -->
+      <div class="section">
+        <h2 class="section-title">🛠 Compétences Techniques</h2>
+        <div class="skills-grid">
+          <div class="skill-category">
+            <h4>Front-end</h4>
+            <ul>
+              <li>HTML5, CSS3</li>
+              <li>JavaScript</li>
+              <li>React</li>
+              <li>Bootstrap</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Back-end</h4>
+            <ul>
+              <li>PHP</li>
+              <li>Laravel</li>
+              <li>MySQL</li>
+              <li>MongoDB</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Outils & Méthodologies</h4>
+            <ul>
+              <li>Git, GitLab, GitHub</li>
+              <li>Agile Scrum</li>
+              <li>VS Code</li>
+            </ul>
+          </div>
+          <div class="skill-category">
+            <h4>Informatique</h4>
+            <ul>
+              <li>Bases de données</li>
+              <li>Algorithmique</li>
+              <li>Structures de données</li>
+              <li>Analyse & résolution</li>
+            </ul>
+          </div>
+        </div>
+      </div>
+
+      <!-- Langues -->
+      <div class="section">
+        <h2 class="section-title">🌍 Langues</h2>
+        <div class="lang-item">
+          <h4>Arabe <span style="float:right;font-weight:normal;">Langue maternelle</span></h4>
+          <div class="lang-bar"><div class="lang-fill" style="width:100%"></div></div>
+        </div>
+        <div class="lang-item">
+          <h4>Français <span style="float:right;font-weight:normal;">Intermédiaire</span></h4>
+          <div class="lang-bar"><div class="lang-fill" style="width:70%"></div></div>
+        </div>
+        <div class="lang-item">
+          <h4>Anglais <span style="float:right;font-weight:normal;">Intermédiaire</span></h4>
+          <div class="lang-bar"><div class="lang-fill" style="width:65%"></div></div>
+        </div>
+      </div>
+
+      <!-- Qualités -->
+      <div class="section">
+        <h2 class="section-title">💪 Qualités Personnelles</h2>
+        <div class="qualities-grid">
+          <span class="quality-tag">Sens de la responsabilité</span>
+          <span class="quality-tag">Esprit d'équipe</span>
+          <span class="quality-tag">Capacité d'apprentissage rapide</span>
+          <span class="quality-tag">Organisation</span>
+          <span class="quality-tag">Gestion du temps</span>
+          <span class="quality-tag">Sens de la communication</span>
+        </div>
+      </div>
+
+      <!-- Centres d'intérêt -->
+      <div class="section">
+        <h2 class="section-title">❤️ Centres d'Intérêt</h2>
+        <div class="interests-grid">
+          <span class="interest-tag">🎯 Développement personnel</span>
+          <span class="interest-tag">💻 Coding / Programmation</span>
+          <span class="interest-tag">🎵 Musique</span>
+          <span class="interest-tag">🚀 Nouvelles technologies</span>
+        </div>
+      </div>
+    </div>
+  </div>
+</body>
+</html>
